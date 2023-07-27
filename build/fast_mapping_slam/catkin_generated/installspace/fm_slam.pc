@@ -1,0 +1,8 @@
+prefix=/home/autel/fm_slam_ws/install
+
+Name: fm_slam
+Description: Description of fm_slam
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: nav_msgs roscpp sensor_msgs tf tf_conversions laser_geometry
