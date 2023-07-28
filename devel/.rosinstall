@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/autel/fm_slam_ws/devel/setup.sh

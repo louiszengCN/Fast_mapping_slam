@@ -1,0 +1,2 @@
+fast_mapping_slam
+-DCATKIN_DEVEL_PREFIX=/home/autel/fm_slam_ws/devel -DCMAKE_INSTALL_PREFIX=/home/autel/fm_slam_ws/install -G Unix Makefiles
