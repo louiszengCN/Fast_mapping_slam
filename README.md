@@ -3,7 +3,7 @@ A light slam algorithm which runs five times faster than hector slam
 
 ### To quickly start, you should follow:
 1. #### create simulation environment
-```python
+```shell
 cd /src
 git clone https://github.com/6-robot/wpr_simulation.git
 cd /wpr_simulation/scripts
@@ -14,7 +14,7 @@ back to your root
 catkin_make
 ```
 2. ### start simulation environment
-```python
+```shell
 # start simulation environment
 roslaunch wpr_simulation wpb_stage_robocup.launch
 # start keyboard control node
@@ -23,7 +23,7 @@ rosrun wpr_simulation keyboard_vel_ctrl
 rosrun fm_slam fm_slam_node
 ```
 3. ### view map in rviz
-```python
+```shell
 rviz
 ```
 
