@@ -118,6 +118,11 @@ fm_slam_node_EXTERNAL_OBJECTS =
 /home/autel/fm_slam_ws/devel/lib/fm_slam/fm_slam_node: /usr/lib/x86_64-linux-gnu/libboost_system.so.1.71.0
 /home/autel/fm_slam_ws/devel/lib/fm_slam/fm_slam_node: /usr/lib/x86_64-linux-gnu/libboost_thread.so.1.71.0
 /home/autel/fm_slam_ws/devel/lib/fm_slam/fm_slam_node: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4
+/home/autel/fm_slam_ws/devel/lib/fm_slam/fm_slam_node: /usr/lib/x86_64-linux-gnu/libboost_system.so
+/home/autel/fm_slam_ws/devel/lib/fm_slam/fm_slam_node: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
+/home/autel/fm_slam_ws/devel/lib/fm_slam/fm_slam_node: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
+/home/autel/fm_slam_ws/devel/lib/fm_slam/fm_slam_node: /usr/lib/x86_64-linux-gnu/libboost_iostreams.so
+/home/autel/fm_slam_ws/devel/lib/fm_slam/fm_slam_node: /usr/lib/x86_64-linux-gnu/libboost_regex.so
 /home/autel/fm_slam_ws/devel/lib/fm_slam/fm_slam_node: fast_mapping_slam/CMakeFiles/fm_slam_node.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/autel/fm_slam_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable /home/autel/fm_slam_ws/devel/lib/fm_slam/fm_slam_node"
 	cd /home/autel/fm_slam_ws/build/fast_mapping_slam && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/fm_slam_node.dir/link.txt --verbose=$(VERBOSE)

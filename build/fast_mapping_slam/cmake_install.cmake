@@ -57,3 +57,18 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/fm_slam" TYPE FILE FILES "/home/autel/fm_slam_ws/src/fast_mapping_slam/package.xml")
 endif()
 
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/autel/fm_slam_ws/build/fast_mapping_slam/catkin_generated/installspace/fm_slam.pc")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/fm_slam/cmake" TYPE FILE FILES
+    "/home/autel/fm_slam_ws/build/fast_mapping_slam/catkin_generated/installspace/fm_slamConfig.cmake"
+    "/home/autel/fm_slam_ws/build/fast_mapping_slam/catkin_generated/installspace/fm_slamConfig-version.cmake"
+    )
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/fm_slam" TYPE FILE FILES "/home/autel/fm_slam_ws/src/fast_mapping_slam/package.xml")
+endif()
+
