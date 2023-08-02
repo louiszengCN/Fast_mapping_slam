@@ -899,6 +899,30 @@ compensate_fm_slam_node/fast:
 	cd /home/autel/fm_slam_ws/build && $(MAKE) $(MAKESILENT) -f fast_mapping_slam/CMakeFiles/compensate_fm_slam_node.dir/build.make fast_mapping_slam/CMakeFiles/compensate_fm_slam_node.dir/build
 .PHONY : compensate_fm_slam_node/fast
 
+src/compensate.o: src/compensate.cc.o
+.PHONY : src/compensate.o
+
+# target to build an object file
+src/compensate.cc.o:
+	cd /home/autel/fm_slam_ws/build && $(MAKE) $(MAKESILENT) -f fast_mapping_slam/CMakeFiles/compensate_fm_slam_node.dir/build.make fast_mapping_slam/CMakeFiles/compensate_fm_slam_node.dir/src/compensate.cc.o
+.PHONY : src/compensate.cc.o
+
+src/compensate.i: src/compensate.cc.i
+.PHONY : src/compensate.i
+
+# target to preprocess a source file
+src/compensate.cc.i:
+	cd /home/autel/fm_slam_ws/build && $(MAKE) $(MAKESILENT) -f fast_mapping_slam/CMakeFiles/compensate_fm_slam_node.dir/build.make fast_mapping_slam/CMakeFiles/compensate_fm_slam_node.dir/src/compensate.cc.i
+.PHONY : src/compensate.cc.i
+
+src/compensate.s: src/compensate.cc.s
+.PHONY : src/compensate.s
+
+# target to generate assembly for a file
+src/compensate.cc.s:
+	cd /home/autel/fm_slam_ws/build && $(MAKE) $(MAKESILENT) -f fast_mapping_slam/CMakeFiles/compensate_fm_slam_node.dir/build.make fast_mapping_slam/CMakeFiles/compensate_fm_slam_node.dir/src/compensate.cc.s
+.PHONY : src/compensate.cc.s
+
 src/plicp_map.o: src/plicp_map.cc.o
 .PHONY : src/plicp_map.o
 
@@ -1012,6 +1036,9 @@ help:
 	@echo "... tf_generate_messages_py"
 	@echo "... compensate_fm_slam_node"
 	@echo "... fm_slam_node"
+	@echo "... src/compensate.o"
+	@echo "... src/compensate.i"
+	@echo "... src/compensate.s"
 	@echo "... src/plicp_map.o"
 	@echo "... src/plicp_map.i"
 	@echo "... src/plicp_map.s"

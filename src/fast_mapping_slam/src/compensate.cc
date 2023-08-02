@@ -1,12 +1,13 @@
 #include "../include/compensate.h"
 
-LaserScanProcessor::LaserScanProcessor() : buffer_size(50) {
+LaserScanProcessor::LaserScanProcessor() : buffer_size(10) {
     // 初始化 compensated_scan
-    compensated_scan.reset(new sensor_msgs::LaserScan);
+    //compensated_scan.reset(new sensor_msgs::LaserScan);
 }
 
 sensor_msgs::LaserScan::ConstPtr LaserScanProcessor::processScan(const sensor_msgs::LaserScan::ConstPtr& scan_msg) {
     // 将LaserScan消息转换为PointCloud
+    //compensated_scan = scan_msg;
     pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_in(new pcl::PointCloud<pcl::PointXYZ>);
     for (size_t i = 0; i < scan_msg->ranges.size(); ++i) {
         if (scan_msg->ranges[i] < scan_msg->range_max && scan_msg->ranges[i] > scan_msg->range_min) {
@@ -71,7 +72,7 @@ sensor_msgs::LaserScan::ConstPtr LaserScanProcessor::processScan(const sensor_ms
         //visualizePointCloud(cloud_out);
     }
 
-    return nullptr;
+    return scan_msg;
 }
 
 void LaserScanProcessor::visualizePointCloud(const pcl::PointCloud<pcl::PointXYZ>& cloud) {

@@ -289,6 +289,10 @@ void ScanMatchPLICP::ScanCallback(const sensor_msgs::LaserScan::ConstPtr &scan_m
     //建图部分  
     std::chrono::steady_clock::time_point start_time_map = std::chrono::steady_clock::now();
 
+    
+
+
+
     temp_angle_increment = scan_msg->angle_increment;
     temp_angle_min = scan_msg->angle_min;
     std::vector<float> ranges = scan_msg->ranges;

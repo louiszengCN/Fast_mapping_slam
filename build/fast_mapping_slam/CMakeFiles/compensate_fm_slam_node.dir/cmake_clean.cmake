@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "/home/autel/fm_slam_ws/devel/lib/fm_slam/compensate_fm_slam_node"
   "/home/autel/fm_slam_ws/devel/lib/fm_slam/compensate_fm_slam_node.pdb"
+  "CMakeFiles/compensate_fm_slam_node.dir/src/compensate.cc.o"
+  "CMakeFiles/compensate_fm_slam_node.dir/src/compensate.cc.o.d"
   "CMakeFiles/compensate_fm_slam_node.dir/src/plicp_map_compensate.cc.o"
   "CMakeFiles/compensate_fm_slam_node.dir/src/plicp_map_compensate.cc.o.d"
 )

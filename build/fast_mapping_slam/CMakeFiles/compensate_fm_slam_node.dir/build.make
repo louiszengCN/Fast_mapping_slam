@@ -69,10 +69,24 @@ include fast_mapping_slam/CMakeFiles/compensate_fm_slam_node.dir/progress.make
 # Include the compile flags for this target's objects.
 include fast_mapping_slam/CMakeFiles/compensate_fm_slam_node.dir/flags.make
 
+fast_mapping_slam/CMakeFiles/compensate_fm_slam_node.dir/src/compensate.cc.o: fast_mapping_slam/CMakeFiles/compensate_fm_slam_node.dir/flags.make
+fast_mapping_slam/CMakeFiles/compensate_fm_slam_node.dir/src/compensate.cc.o: /home/autel/fm_slam_ws/src/fast_mapping_slam/src/compensate.cc
+fast_mapping_slam/CMakeFiles/compensate_fm_slam_node.dir/src/compensate.cc.o: fast_mapping_slam/CMakeFiles/compensate_fm_slam_node.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/autel/fm_slam_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object fast_mapping_slam/CMakeFiles/compensate_fm_slam_node.dir/src/compensate.cc.o"
+	cd /home/autel/fm_slam_ws/build/fast_mapping_slam && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT fast_mapping_slam/CMakeFiles/compensate_fm_slam_node.dir/src/compensate.cc.o -MF CMakeFiles/compensate_fm_slam_node.dir/src/compensate.cc.o.d -o CMakeFiles/compensate_fm_slam_node.dir/src/compensate.cc.o -c /home/autel/fm_slam_ws/src/fast_mapping_slam/src/compensate.cc
+
+fast_mapping_slam/CMakeFiles/compensate_fm_slam_node.dir/src/compensate.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/compensate_fm_slam_node.dir/src/compensate.cc.i"
+	cd /home/autel/fm_slam_ws/build/fast_mapping_slam && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/autel/fm_slam_ws/src/fast_mapping_slam/src/compensate.cc > CMakeFiles/compensate_fm_slam_node.dir/src/compensate.cc.i
+
+fast_mapping_slam/CMakeFiles/compensate_fm_slam_node.dir/src/compensate.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/compensate_fm_slam_node.dir/src/compensate.cc.s"
+	cd /home/autel/fm_slam_ws/build/fast_mapping_slam && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/autel/fm_slam_ws/src/fast_mapping_slam/src/compensate.cc -o CMakeFiles/compensate_fm_slam_node.dir/src/compensate.cc.s
+
 fast_mapping_slam/CMakeFiles/compensate_fm_slam_node.dir/src/plicp_map_compensate.cc.o: fast_mapping_slam/CMakeFiles/compensate_fm_slam_node.dir/flags.make
 fast_mapping_slam/CMakeFiles/compensate_fm_slam_node.dir/src/plicp_map_compensate.cc.o: /home/autel/fm_slam_ws/src/fast_mapping_slam/src/plicp_map_compensate.cc
 fast_mapping_slam/CMakeFiles/compensate_fm_slam_node.dir/src/plicp_map_compensate.cc.o: fast_mapping_slam/CMakeFiles/compensate_fm_slam_node.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/autel/fm_slam_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object fast_mapping_slam/CMakeFiles/compensate_fm_slam_node.dir/src/plicp_map_compensate.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/autel/fm_slam_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object fast_mapping_slam/CMakeFiles/compensate_fm_slam_node.dir/src/plicp_map_compensate.cc.o"
 	cd /home/autel/fm_slam_ws/build/fast_mapping_slam && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT fast_mapping_slam/CMakeFiles/compensate_fm_slam_node.dir/src/plicp_map_compensate.cc.o -MF CMakeFiles/compensate_fm_slam_node.dir/src/plicp_map_compensate.cc.o.d -o CMakeFiles/compensate_fm_slam_node.dir/src/plicp_map_compensate.cc.o -c /home/autel/fm_slam_ws/src/fast_mapping_slam/src/plicp_map_compensate.cc
 
 fast_mapping_slam/CMakeFiles/compensate_fm_slam_node.dir/src/plicp_map_compensate.cc.i: cmake_force
@@ -85,11 +99,13 @@ fast_mapping_slam/CMakeFiles/compensate_fm_slam_node.dir/src/plicp_map_compensat
 
 # Object files for target compensate_fm_slam_node
 compensate_fm_slam_node_OBJECTS = \
+"CMakeFiles/compensate_fm_slam_node.dir/src/compensate.cc.o" \
 "CMakeFiles/compensate_fm_slam_node.dir/src/plicp_map_compensate.cc.o"
 
 # External object files for target compensate_fm_slam_node
 compensate_fm_slam_node_EXTERNAL_OBJECTS =
 
+/home/autel/fm_slam_ws/devel/lib/fm_slam/compensate_fm_slam_node: fast_mapping_slam/CMakeFiles/compensate_fm_slam_node.dir/src/compensate.cc.o
 /home/autel/fm_slam_ws/devel/lib/fm_slam/compensate_fm_slam_node: fast_mapping_slam/CMakeFiles/compensate_fm_slam_node.dir/src/plicp_map_compensate.cc.o
 /home/autel/fm_slam_ws/devel/lib/fm_slam/compensate_fm_slam_node: fast_mapping_slam/CMakeFiles/compensate_fm_slam_node.dir/build.make
 /home/autel/fm_slam_ws/devel/lib/fm_slam/compensate_fm_slam_node: /opt/ros/noetic/lib/libtf_conversions.so
@@ -222,7 +238,7 @@ compensate_fm_slam_node_EXTERNAL_OBJECTS =
 /home/autel/fm_slam_ws/devel/lib/fm_slam/compensate_fm_slam_node: /usr/lib/x86_64-linux-gnu/libXext.so
 /home/autel/fm_slam_ws/devel/lib/fm_slam/compensate_fm_slam_node: /usr/lib/x86_64-linux-gnu/libXt.so
 /home/autel/fm_slam_ws/devel/lib/fm_slam/compensate_fm_slam_node: fast_mapping_slam/CMakeFiles/compensate_fm_slam_node.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/autel/fm_slam_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable /home/autel/fm_slam_ws/devel/lib/fm_slam/compensate_fm_slam_node"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/autel/fm_slam_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable /home/autel/fm_slam_ws/devel/lib/fm_slam/compensate_fm_slam_node"
 	cd /home/autel/fm_slam_ws/build/fast_mapping_slam && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/compensate_fm_slam_node.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

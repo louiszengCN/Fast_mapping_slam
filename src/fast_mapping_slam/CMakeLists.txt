@@ -135,8 +135,9 @@ target_link_libraries(fm_slam_node
 #   ${PCL_LIBRARY_DIRS}
 #   ${PCL_LIBRARIES}
 # )
-
+# .cc要一起编译
 add_executable(compensate_fm_slam_node
+  src/compensate.cc
   src/plicp_map_compensate.cc
 )
 
@@ -151,5 +152,6 @@ target_link_libraries(compensate_fm_slam_node
   ${csm_LIBRARIES}
   ${PCL_LIBRARY_DIRS}
   ${PCL_LIBRARIES}
+  ${CMAKE_CURRENT_SOURCE_DIR/include}
 )
 

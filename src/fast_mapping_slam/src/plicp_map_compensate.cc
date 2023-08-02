@@ -275,13 +275,20 @@ void ScanMatchPLICP::ScanCallback(const sensor_msgs::LaserScan::ConstPtr &scan_m
     std::chrono::steady_clock::time_point start_time_map = std::chrono::steady_clock::now();
 
     LaserScanProcessor laserprocessor;
+   
     sensor_msgs::LaserScan::ConstPtr scan_msg_compensated = laserprocessor.processScan(scan_msg);
+    
     
     temp_angle_increment = scan_msg_compensated->angle_increment;
     temp_angle_min = scan_msg_compensated->angle_min;
+   
+
     std::vector<float> ranges = scan_msg_compensated->ranges;
+
     
     for (size_t i = 0; i < ranges.size(); ++i) {
+    
+
         // 跳过无效点
         if(ranges[i]<scan_msg_compensated->range_min || ranges[i]>scan_msg_compensated->range_max)
         {
