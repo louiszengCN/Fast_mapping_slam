@@ -1,0 +1,2 @@
+fast_mapping_slam
+-DCATKIN_DEVEL_PREFIX=/home/autel/fast_mapping_slam_with_backend/devel -DCMAKE_INSTALL_PREFIX=/home/autel/fast_mapping_slam_with_backend/install -G Unix Makefiles
