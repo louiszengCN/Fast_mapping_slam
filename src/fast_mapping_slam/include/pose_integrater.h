@@ -15,7 +15,7 @@ public:
 
     PoseFusion();
 
-    vector<double> integratePoses(std::vector<double> pose1, std::vector<double> pose2, double time1, double time2);
+    vector<double> integratePoses(std::vector<double> pose1, std::vector<double> pose2, std::chrono::steady_clock::time_point time1, std::chrono::steady_clock::time_point time2);
 
     Pose double_2_pose(double x, double y, double theta);
 

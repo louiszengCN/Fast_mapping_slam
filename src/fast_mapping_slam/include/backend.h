@@ -9,7 +9,8 @@
 class Backend {
 public:
     
-    std::vector<double> Backend_match(const sensor_msgs::LaserScan::ConstPtr& scan_msg, nav_msgs::OccupancyGrid map_msg);
+    std::vector<double> Backend_match(const sensor_msgs::LaserScan::ConstPtr& scan_msg, nav_msgs::OccupancyGrid map_msg, 
+                                        nav_msgs::OccupancyGrid curr_map_msg);
     //Backend();
 private:
 

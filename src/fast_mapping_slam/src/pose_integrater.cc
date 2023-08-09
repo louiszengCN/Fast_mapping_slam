@@ -12,13 +12,15 @@ PoseFusion::Pose PoseFusion::double_2_pose(double x, double y, double theta){
 
 }
 
-vector<double> PoseFusion::integratePoses(vector<double> pose1, vector<double> pose2, double timestamp1, double timestamp2) {
+vector<double> PoseFusion::integratePoses(vector<double> pose1, vector<double> pose2, std::chrono::steady_clock::time_point timestamp1, std::chrono::steady_clock::time_point timestamp2) {
     Pose fused_pose;
     Pose pose_front = double_2_pose(pose1[0], pose1[1], pose1[2]);
     Pose pose_backend = double_2_pose(pose2[0], pose2[1], pose2[2]);
     //由时间戳计算权重
-    double current_timestamp = ros::Time::now().toSec();
-    double alpha = (current_timestamp - timestamp1) / (timestamp2 - timestamp1);
+    std::chrono::steady_clock::time_point current_timestamp = std::chrono::steady_clock::now();
+    std::chrono::duration<double> time_used_1 = std::chrono::duration_cast<std::chrono::duration<double>>(current_timestamp - timestamp1);
+    std::chrono::duration<double> time_used_2 = std::chrono::duration_cast<std::chrono::duration<double>>(timestamp2 - timestamp1);
+    double alpha = time_used_1.count() / time_used_2.count();
     // 旋转部分使用球面线性插值(Slerp)计算
     Eigen::Quaterniond q1(pose_front.rotation_matrix);
     Eigen::Quaterniond q2(pose_backend.rotation_matrix);

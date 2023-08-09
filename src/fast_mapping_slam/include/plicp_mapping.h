@@ -56,6 +56,8 @@ private:
     ros::Publisher odom_publisher_;         // 声明一个Publisher
     ros::Publisher path_publisher_;
     ros::Publisher map_publihser_;
+    ros::Publisher map_publihser_b;
+
 
     ros::Time last_icp_time_;
     ros::Time current_time_;
@@ -81,7 +83,7 @@ private:
 
     tf2::Transform base_in_odom_;           // base_link在odom坐标系下的坐标
     tf2::Transform base_in_odom_keyframe_;  // base_link在odom坐标系下的keyframe的坐标
-    tf2::Transform base_in_odom_bkd;           // base_link在odom坐标系下的坐标
+             // base_link在odom坐标系下的坐标
 
     // parameters
     bool initialized_;
@@ -121,7 +123,7 @@ private:
     double temp_angle_min;
     std::vector<std::vector<int>> grid_map;
 
-
+    bool isfirstscan = true;
 
     // csm
     sm_params input_;
@@ -130,6 +132,7 @@ private:
 
     void InitParams();
     void CreateCache(const sensor_msgs::LaserScan::ConstPtr &scan_msg);
+    std::vector<double> laser2odom(double x, double y, double z);
     bool GetBaseToLaserTf(const std::string &frame_id);
     void LaserScanToLDP(const sensor_msgs::LaserScan::ConstPtr &scan_msg, LDP &ldp);
     void ScanMatchWithPLICP(LDP &curr_ldp_scan, const ros::Time &time);
@@ -140,7 +143,8 @@ private:
     void publish_path(const tf2::Transform &corr_ch);
     std::vector<Point> Bresenham(int x0, int y0, int x1, int y1);
    //void updateMap(const sensor_msgs::LaserScan::ConstPtr& scan_msg, double robot_x, double robot_y, double robot_theta);
-    void publishMap();
+    void publishMap(const sensor_msgs::LaserScan::ConstPtr &scan_msg, double r_p_x, double r_p_y, double r_p_theta);
+    void publishMap_back(const sensor_msgs::LaserScan::ConstPtr &scan_msg, double r_p_x, double r_p_y, double r_p_theta);
 public:
     ScanMatchPLICP();
     ~ScanMatchPLICP();
