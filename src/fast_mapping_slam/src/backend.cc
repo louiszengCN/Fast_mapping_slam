@@ -23,21 +23,7 @@ std::vector<double> Backend::Backend_match(const sensor_msgs::LaserScan::ConstPt
             }
         }
     }
-    // 还有一个机器人位姿的偏移没有算进去
-    // Convert LaserScan to PCL point cloud
-    // pcl::PointCloud<pcl::PointXYZ>::Ptr scan_cloud(new pcl::PointCloud<pcl::PointXYZ>);
-    // for (size_t i = 0; i < scan_msg->ranges.size(); ++i) {
-    //     float range = scan_msg->ranges[i];
-    //     float angle = scan_msg->angle_min + i * scan_msg->angle_increment;
-    //     if (std::isfinite(range) && range >= scan_msg->range_min && range <= scan_msg->range_max) {
-    //         pcl::PointXYZ point;
-    //         // 要把坐标变换到栅格去 保证坐标系一致才能进行匹配
-    //         point.x = static_cast<int>((range * cos(angle + theta) + x + 22.5) / 0.05);
-    //         point.y = static_cast<int>((range * sin(angle + theta) + y + 22.5) / 0.05);
-    //         point.z = 0.0;
-    //         scan_cloud->push_back(point);
-    //     }
-    // }
+    
     pcl::PointCloud<pcl::PointXYZ>::Ptr curr_map_cloud(new pcl::PointCloud<pcl::PointXYZ>);
        for (int row = 0; row < curr_map_msg.info.height; ++row) {
         for (int col = 0; col < curr_map_msg.info.width; ++col) {

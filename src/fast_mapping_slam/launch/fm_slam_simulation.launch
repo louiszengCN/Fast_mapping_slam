@@ -1,0 +1,11 @@
+<launch>
+<!-- 打开仿真环境 -->
+  <include file="$(find wpr_simulation)/launch/wpb_stage_robocup.launch" />
+  <!-- 打开slam -->
+  <node name="fm_slam_node" pkg="fm_slam" type="fm_slam_node" />
+  <!-- 打开控制器 -->
+  <node name="keyboard_vel_ctrl" pkg="wpr_simulation" type="keyboard_vel_ctrl" />
+  <!-- rviz配置-->
+  <node name="rviz" pkg="rviz" type="rviz" args="-d /home/autel/fast_mapping_slam_with_backend/src/fast_mapping_slam/launch/fm_slam_rviz.rviz" />
+
+</launch>

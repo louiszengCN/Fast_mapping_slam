@@ -283,7 +283,7 @@ void ScanMatchPLICP::ScanCallback(const sensor_msgs::LaserScan::ConstPtr &scan_m
      
 std::chrono::steady_clock::time_point start_time_map = std::chrono::steady_clock::now();
 // 只用前端建图
-// publishMap(scan_msg, robot_pose_x, robot_pose_y, robot_pose_theta);
+publishMap(scan_msg, robot_pose_x, robot_pose_y, robot_pose_theta);
 std::chrono::steady_clock::time_point end_time = std::chrono::steady_clock::now();
 std::chrono::duration<double> time_used = std::chrono::duration_cast<std::chrono::duration<double>>(end_time - start_time_map);
 std::cout<<"建图用时: "<< time_used.count() << " 秒。" << std::endl;
@@ -291,34 +291,34 @@ std::cout<<"建图用时: "<< time_used.count() << " 秒。" << std::endl;
 
 //******************************************************后端******************************************************************************************//
 
-std::chrono::steady_clock::time_point backend_start_time = std::chrono::steady_clock::now();
+// std::chrono::steady_clock::time_point backend_start_time = std::chrono::steady_clock::now();
 // 后端执行map to map的精确匹配
-nav_msgs::OccupancyGrid curr_submap = submap_creater.CreateSubMap(scan_msg, r_x_laser, r_y_laser, r_theta_laser);
-if(!isfirstscan)
-    {
+// nav_msgs::OccupancyGrid curr_submap = submap_creater.CreateSubMap(scan_msg, r_x_laser, r_y_laser, r_theta_laser);
+// if(!isfirstscan)
+    // {
     
-    std::vector<double> backend_pose = backend_matcher.Backend_match(scan_msg, last_submap, curr_submap);
+    // std::vector<double> backend_pose = backend_matcher.Backend_match(scan_msg, last_submap, curr_submap);
     // 坐标变换 匹配完成后的结果是在laser系下 要变换到odom系才能够用来建图
-    vector<double> result_back = laser2odom(backend_pose[0], backend_pose[1], backend_pose[2]);
-    std::chrono::steady_clock::time_point backend_time = std::chrono::steady_clock::now();
+    // vector<double> result_back = laser2odom(backend_pose[0], backend_pose[1], backend_pose[2]);
+    // std::chrono::steady_clock::time_point backend_time = std::chrono::steady_clock::now();
     // 前后端数据融合
-    std::vector<double>front_pose = {robot_pose_x, robot_pose_y, robot_pose_theta} ;
+    // std::vector<double>front_pose = {robot_pose_x, robot_pose_y, robot_pose_theta} ;
     // 由于没有分多线程 所以先简单的用时间差代替 自然会多考虑后端的数据
-    std::vector<double>fusion_pose = posefusion.integratePoses(front_pose, result_back, end_time_, backend_time);
+    // std::vector<double>fusion_pose = posefusion.integratePoses(front_pose, result_back, end_time_, backend_time);
     // 后端融合建图 打开后可以查看建图效果对比
-    publishMap_back(scan_msg, fusion_pose[0], fusion_pose[1], fusion_pose[2]);
+    // publishMap_back(scan_msg, fusion_pose[0], fusion_pose[1], fusion_pose[2]);
     // ROS_INFO("xb in odom %f, yb in odom %f, zb in odom %f",fusion_pose[0], fusion_pose[1], fusion_pose[2]);
 
-    }
-isfirstscan = false;
-last_submap = curr_submap;
-std::chrono::steady_clock::time_point backend_end_time = std::chrono::steady_clock::now();
-std::chrono::duration<double> backend_time_used = std::chrono::duration_cast<std::chrono::duration<double>>(backend_end_time - backend_start_time);
-std::cout<<"后端用时: "<< backend_time_used.count() << " 秒。" << std::endl;
+    // }
+// isfirstscan = false;
+// last_submap = curr_submap;
+// std::chrono::steady_clock::time_point backend_end_time = std::chrono::steady_clock::now();
+// std::chrono::duration<double> backend_time_used = std::chrono::duration_cast<std::chrono::duration<double>>(backend_end_time - backend_start_time);
+// std::cout<<"后端用时: "<< backend_time_used.count() << " 秒。" << std::endl;
     
 //******************************************************************************************************************************************************//
-std::chrono::duration<double> whole_time_used_ = std::chrono::duration_cast<std::chrono::duration<double>>(backend_end_time - start_time);
-std::cout<<"整体用时: "<< whole_time_used_.count() << " 秒。" << std::endl;
+// std::chrono::duration<double> whole_time_used_ = std::chrono::duration_cast<std::chrono::duration<double>>(backend_end_time - start_time);
+// std::cout<<"整体用时: "<< whole_time_used_.count() << " 秒。" << std::endl;
 
 }
 
@@ -511,6 +511,7 @@ void ScanMatchPLICP::ScanMatchWithPLICP(LDP &curr_ldp_scan, const ros::Time &tim
     r_x_laser = output_.x[0];
     r_y_laser = output_.x[1];
     r_theta_laser = output_.x[2];
+    std::cout<<"theta laser"<<r_theta_laser<<std::endl;
     // end_time_ = std::chrono::steady_clock::now();
     // time_used_ = std::chrono::duration_cast<std::chrono::duration<double>>(end_time_ - start_time_);
 
@@ -539,7 +540,9 @@ void ScanMatchPLICP::ScanMatchWithPLICP(LDP &curr_ldp_scan, const ros::Time &tim
         // 在栅格中更新的坐标位置也会有差距，导致建图发生重叠
         robot_pose_x = base_in_odom_.getOrigin().getX();
         robot_pose_y = base_in_odom_.getOrigin().getY();
-        robot_pose_theta = base_in_odom_.getOrigin().getZ();
+        //robot_pose_theta = base_in_odom_.getOrigin().getZ();
+        robot_pose_theta = tf2::getYaw(base_in_odom_.getRotation());
+
         ROS_INFO("xf in odom %f, yf in odom %f, zf in odom %f", robot_pose_x, robot_pose_y, robot_pose_theta);
         // vector<double> result_temp = laser2odom(output_.x[0], output_.x[1], output_.x[2]);
         // ROS_INFO("x in odom %f, y in odom %f, z in odom %f",result_temp[0], result_temp[1], result_temp[2]);
@@ -751,9 +754,11 @@ for (size_t i = 0; i < ranges.size(); ++i) {
         continue;
     }
     angle_robot = temp_angle_min + i * temp_angle_increment;
+    // 叠图的原因是雷达扫描的运动畸变 这里的r_p_theta是两帧scan之间的位姿变换，但是在两帧scan中间 机器人已经发生了许多运动 导致
+    // 这里的r_p_x不足够把坐标系变换回去，想要解决这个问题，要么加强扫描匹配的约束（治标），或者加入运动补偿（治本）
     // 雷达hit点的坐标 laser坐标系下
-    x_robot = ranges[i] * cos(angle_robot + r_p_theta) + r_p_x;
-    y_robot = ranges[i] * sin(angle_robot + r_p_theta) + r_p_y;
+    x_robot = ranges[i] * cos(angle_robot - r_p_theta) + r_p_x;
+    y_robot = ranges[i] * sin(angle_robot - r_p_theta) + r_p_y;
     // 雷达hit点坐标转换到栅格坐标系
     grid_x = static_cast<int>((x_robot - map_origin_x) / resolution) ;
     grid_y = static_cast<int>((y_robot - map_origin_y) / resolution) ;
@@ -836,8 +841,12 @@ if(ranges[i]<scan_msg->range_min || ranges[i]>scan_msg->range_max)
 }
 angle_robot = temp_angle_min + i * temp_angle_increment;
 // 雷达hit点的坐标 laser坐标系下
+// x_robot = ranges[i] * cos(angle_robot + r_p_theta) + r_p_x;
+// y_robot = ranges[i] * sin(angle_robot + r_p_theta) + r_p_y;
 x_robot = ranges[i] * cos(angle_robot + r_p_theta) + r_p_x;
 y_robot = ranges[i] * sin(angle_robot + r_p_theta) + r_p_y;
+
+
 // 雷达hit点坐标转换到栅格坐标系
 grid_x = static_cast<int>((x_robot - map_origin_x) / resolution) ;
 grid_y = static_cast<int>((y_robot - map_origin_y) / resolution) ;
@@ -914,7 +923,7 @@ vector<double> ScanMatchPLICP::laser2odom(double x, double y, double z)
     vector<double> pose(3); // 注意用Vector的时候要分配足够的内存空间
     pose[0] = backend_result_odom.getOrigin().getX();
     pose[1] = backend_result_odom.getOrigin().getY();
-    pose[2] = backend_result_odom.getOrigin().getZ();
+    pose[2] = tf2::getYaw(backend_result_odom.getRotation());
     return pose;
 }
 
