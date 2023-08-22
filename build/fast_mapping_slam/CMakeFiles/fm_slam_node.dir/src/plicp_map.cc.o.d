@@ -1117,6 +1117,7 @@ fast_mapping_slam/CMakeFiles/fm_slam_node.dir/src/plicp_map.cc.o: \
  /opt/ros/noetic/include/nav_msgs/OccupancyGrid.h \
  /opt/ros/noetic/include/nav_msgs/MapMetaData.h \
  /home/autel/fast_mapping_slam_with_backend/src/fast_mapping_slam/src/../include/plicp_mapping.h \
+ /opt/ros/noetic/include/sensor_msgs/Imu.h \
  /opt/ros/noetic/include/tf2/utils.h \
  /opt/ros/noetic/include/tf2/LinearMath/Transform.h \
  /opt/ros/noetic/include/tf2/LinearMath/Matrix3x3.h \
@@ -1581,9 +1582,20 @@ fast_mapping_slam/CMakeFiles/fm_slam_node.dir/src/plicp_map.cc.o: \
  /opt/ros/noetic/include/csm/math_utils.h \
  /opt/ros/noetic/include/csm/math_utils_gsl.h \
  /opt/ros/noetic/include/egsl/egsl.h \
- /home/autel/fast_mapping_slam_with_backend/src/fast_mapping_slam/src/../include/backend.h \
- /usr/include/pcl-1.10/pcl/point_types.h \
- /usr/include/pcl-1.10/pcl/pcl_macros.h /usr/include/eigen3/Eigen/Core \
+ /opt/ros/noetic/include/sensor_msgs/PointCloud2.h \
+ /opt/ros/noetic/include/sensor_msgs/PointField.h \
+ /opt/ros/noetic/include/tf/LinearMath/Quaternion.h \
+ /opt/ros/noetic/include/tf/LinearMath/Vector3.h \
+ /opt/ros/noetic/include/tf/LinearMath/Scalar.h \
+ /opt/ros/noetic/include/tf/LinearMath/MinMax.h \
+ /opt/ros/noetic/include/tf/LinearMath/QuadWord.h \
+ /opt/ros/noetic/include/tf/transform_datatypes.h \
+ /opt/ros/noetic/include/tf/LinearMath/Transform.h \
+ /opt/ros/noetic/include/tf/LinearMath/Matrix3x3.h \
+ /opt/ros/noetic/include/tf/LinearMath/Quaternion.h \
+ /opt/ros/noetic/include/pcl_ros/point_cloud.h \
+ /usr/include/pcl-1.10/pcl/point_cloud.h \
+ /usr/include/eigen3/Eigen/StdVector /usr/include/eigen3/Eigen/Core \
  /usr/include/eigen3/Eigen/src/Core/util/DisableStupidWarnings.h \
  /usr/include/eigen3/Eigen/src/Core/util/Macros.h \
  /usr/include/eigen3/Eigen/src/Core/util/MKL_support.h \
@@ -1700,102 +1712,8 @@ fast_mapping_slam/CMakeFiles/fm_slam_node.dir/src/plicp_map.cc.o: \
  /usr/include/eigen3/Eigen/src/Core/ArrayWrapper.h \
  /usr/include/eigen3/Eigen/src/Core/GlobalFunctions.h \
  /usr/include/eigen3/Eigen/src/Core/util/ReenableStupidWarnings.h \
- /usr/include/pcl-1.10/pcl/pcl_config.h \
- /usr/include/pcl-1.10/pcl/register_point_struct.h \
- /usr/include/pcl-1.10/pcl/point_traits.h \
- /usr/include/pcl-1.10/pcl/PCLPointField.h \
- /usr/include/boost/preprocessor/seq/for_each.hpp \
- /usr/include/boost/preprocessor/comparison.hpp \
- /usr/include/boost/preprocessor/comparison/equal.hpp \
- /usr/include/boost/preprocessor/comparison/not_equal.hpp \
- /usr/include/boost/preprocessor/comparison/greater.hpp \
- /usr/include/boost/preprocessor/comparison/less.hpp \
- /usr/include/boost/preprocessor/comparison/greater_equal.hpp \
- /usr/include/pcl-1.10/pcl/impl/point_types.hpp \
- /usr/include/pcl-1.10/pcl/common/point_tests.h \
- /usr/include/pcl-1.10/pcl/registration/icp.h \
- /usr/include/pcl-1.10/pcl/make_shared.h \
- /usr/include/pcl-1.10/pcl/sample_consensus/ransac.h \
- /usr/include/pcl-1.10/pcl/sample_consensus/sac.h \
- /usr/include/pcl-1.10/pcl/sample_consensus/boost.h \
- /usr/include/boost/random.hpp \
- /usr/include/boost/random/additive_combine.hpp \
- /usr/include/boost/random/detail/config.hpp \
- /usr/include/boost/random/detail/operators.hpp \
- /usr/include/boost/random/detail/seed.hpp \
- /usr/include/boost/random/linear_congruential.hpp \
- /usr/include/boost/random/detail/const_mod.hpp \
- /usr/include/boost/random/detail/large_arithmetic.hpp \
- /usr/include/boost/random/detail/integer_log2.hpp \
- /usr/include/boost/integer/integer_log2.hpp \
- /usr/include/boost/random/detail/disable_warnings.hpp \
- /usr/include/boost/random/detail/enable_warnings.hpp \
- /usr/include/boost/random/detail/seed_impl.hpp \
- /usr/include/boost/integer/integer_mask.hpp \
- /usr/include/boost/random/traits.hpp \
- /usr/include/boost/random/detail/signed_unsigned_tools.hpp \
- /usr/include/boost/random/detail/generator_bits.hpp \
- /usr/include/boost/random/discard_block.hpp \
- /usr/include/boost/random/independent_bits.hpp \
- /usr/include/boost/random/inversive_congruential.hpp \
- /usr/include/boost/random/lagged_fibonacci.hpp \
- /usr/include/boost/random/uniform_01.hpp \
- /usr/include/boost/random/detail/ptr_helper.hpp \
- /usr/include/boost/random/detail/generator_seed_seq.hpp \
- /usr/include/boost/random/linear_feedback_shift.hpp \
- /usr/include/boost/random/mersenne_twister.hpp \
- /usr/include/boost/random/detail/polynomial.hpp \
- /usr/include/boost/random/ranlux.hpp \
- /usr/include/boost/random/subtract_with_carry.hpp \
- /usr/include/boost/random/shuffle_order.hpp \
- /usr/include/boost/random/shuffle_output.hpp \
- /usr/include/boost/random/taus88.hpp \
- /usr/include/boost/random/xor_combine.hpp \
- /usr/include/boost/random/generate_canonical.hpp \
- /usr/include/boost/random/seed_seq.hpp \
- /usr/include/boost/random/random_number_generator.hpp \
- /usr/include/boost/random/uniform_int_distribution.hpp \
- /usr/include/boost/random/detail/uniform_int_float.hpp \
- /usr/include/boost/random/variate_generator.hpp \
- /usr/include/boost/random/bernoulli_distribution.hpp \
- /usr/include/boost/random/beta_distribution.hpp \
- /usr/include/boost/random/gamma_distribution.hpp \
- /usr/include/boost/random/exponential_distribution.hpp \
- /usr/include/boost/random/detail/int_float_pair.hpp \
- /usr/include/boost/random/binomial_distribution.hpp \
- /usr/include/boost/random/cauchy_distribution.hpp \
- /usr/include/boost/random/chi_squared_distribution.hpp \
- /usr/include/boost/random/discrete_distribution.hpp \
- /usr/include/c++/9/numeric /usr/include/c++/9/bits/stl_numeric.h \
- /usr/include/boost/random/detail/vector_io.hpp \
- /usr/include/boost/random/extreme_value_distribution.hpp \
- /usr/include/boost/random/fisher_f_distribution.hpp \
- /usr/include/boost/random/geometric_distribution.hpp \
- /usr/include/boost/random/hyperexponential_distribution.hpp \
- /usr/include/boost/type_traits/has_pre_increment.hpp \
- /usr/include/boost/type_traits/detail/has_prefix_operator.hpp \
- /usr/include/boost/random/laplace_distribution.hpp \
- /usr/include/boost/random/lognormal_distribution.hpp \
- /usr/include/boost/random/normal_distribution.hpp \
- /usr/include/boost/random/negative_binomial_distribution.hpp \
- /usr/include/boost/random/poisson_distribution.hpp \
- /usr/include/boost/random/non_central_chi_squared_distribution.hpp \
- /usr/include/boost/random/uniform_real_distribution.hpp \
- /usr/include/boost/random/piecewise_constant_distribution.hpp \
- /usr/include/boost/random/uniform_real.hpp \
- /usr/include/boost/random/piecewise_linear_distribution.hpp \
- /usr/include/boost/random/student_t_distribution.hpp \
- /usr/include/boost/random/triangle_distribution.hpp \
- /usr/include/boost/random/uniform_int.hpp \
- /usr/include/boost/random/uniform_on_sphere.hpp \
- /usr/include/boost/random/uniform_smallint.hpp \
- /usr/include/boost/random/weibull_distribution.hpp \
- /usr/include/pcl-1.10/pcl/sample_consensus/sac_model.h \
- /usr/include/pcl-1.10/pcl/pcl_base.h /usr/include/eigen3/Eigen/StdVector \
- /usr/include/eigen3/Eigen/Core \
  /usr/include/eigen3/Eigen/src/StlSupport/StdVector.h \
  /usr/include/eigen3/Eigen/src/StlSupport/details.h \
- /usr/include/pcl-1.10/pcl/point_cloud.h \
  /usr/include/eigen3/Eigen/Geometry /usr/include/eigen3/Eigen/SVD \
  /usr/include/eigen3/Eigen/QR /usr/include/eigen3/Eigen/Cholesky \
  /usr/include/eigen3/Eigen/Jacobi \
@@ -1838,60 +1756,232 @@ fast_mapping_slam/CMakeFiles/fm_slam_node.dir/src/plicp_map.cc.o: \
  /usr/include/eigen3/Eigen/src/Geometry/Umeyama.h \
  /usr/include/eigen3/Eigen/src/Geometry/arch/Geometry_SSE.h \
  /usr/include/pcl-1.10/pcl/PCLHeader.h \
+ /usr/include/pcl-1.10/pcl/pcl_macros.h /usr/include/eigen3/Eigen/Core \
+ /usr/include/pcl-1.10/pcl/pcl_config.h \
  /usr/include/pcl-1.10/pcl/exceptions.h \
- /usr/include/pcl-1.10/pcl/PointIndices.h \
- /usr/include/pcl-1.10/pcl/PCLPointCloud2.h \
- /usr/include/pcl-1.10/pcl/console/print.h \
- /usr/include/pcl-1.10/pcl/pcl_exports.h \
- /usr/include/pcl-1.10/pcl/sample_consensus/model_types.h \
- /usr/include/pcl-1.10/pcl/search/search.h \
+ /usr/include/pcl-1.10/pcl/point_traits.h \
+ /usr/include/pcl-1.10/pcl/PCLPointField.h \
+ /usr/include/pcl-1.10/pcl/make_shared.h \
  /usr/include/pcl-1.10/pcl/for_each_type.h \
  /usr/include/boost/mpl/aux_/unwrap.hpp \
- /usr/include/pcl-1.10/pcl/common/concatenate.h \
  /usr/include/pcl-1.10/pcl/conversions.h \
- /usr/include/pcl-1.10/pcl/PCLImage.h /usr/include/boost/foreach.hpp \
+ /usr/include/pcl-1.10/pcl/PCLPointCloud2.h \
+ /usr/include/pcl-1.10/pcl/PCLImage.h \
+ /usr/include/pcl-1.10/pcl/console/print.h \
+ /usr/include/pcl-1.10/pcl/pcl_exports.h /usr/include/boost/foreach.hpp \
  /usr/include/boost/foreach_fwd.hpp \
+ /opt/ros/noetic/include/pcl_conversions/pcl_conversions.h \
+ /opt/ros/noetic/include/sensor_msgs/Image.h \
+ /usr/include/pcl-1.10/pcl/PointIndices.h \
+ /opt/ros/noetic/include/pcl_msgs/PointIndices.h \
+ /usr/include/pcl-1.10/pcl/ModelCoefficients.h \
+ /opt/ros/noetic/include/pcl_msgs/ModelCoefficients.h \
+ /usr/include/pcl-1.10/pcl/Vertices.h \
+ /opt/ros/noetic/include/pcl_msgs/Vertices.h \
+ /usr/include/pcl-1.10/pcl/PolygonMesh.h \
+ /opt/ros/noetic/include/pcl_msgs/PolygonMesh.h \
+ /usr/include/pcl-1.10/pcl/io/pcd_io.h \
+ /usr/include/pcl-1.10/pcl/io/file_io.h \
+ /usr/include/pcl-1.10/pcl/common/io.h /usr/include/c++/9/numeric \
+ /usr/include/c++/9/bits/stl_numeric.h \
+ /usr/include/pcl-1.10/pcl/pcl_base.h \
+ /usr/include/pcl-1.10/pcl/common/impl/io.hpp \
+ /usr/include/pcl-1.10/pcl/common/concatenate.h \
  /usr/include/pcl-1.10/pcl/common/copy_point.h \
  /usr/include/pcl-1.10/pcl/common/impl/copy_point.hpp \
- /usr/include/pcl-1.10/pcl/sample_consensus/sac_model_registration.h \
- /usr/include/pcl-1.10/pcl/sample_consensus/eigen.h \
- /usr/include/eigen3/unsupported/Eigen/NonLinearOptimization \
- /usr/include/eigen3/Eigen/Jacobi /usr/include/eigen3/Eigen/QR \
- /usr/include/eigen3/unsupported/Eigen/NumericalDiff \
- /usr/include/eigen3/unsupported/Eigen/src/NumericalDiff/NumericalDiff.h \
- /usr/include/eigen3/unsupported/Eigen/src/NonLinearOptimization/qrsolv.h \
- /usr/include/eigen3/unsupported/Eigen/src/NonLinearOptimization/r1updt.h \
- /usr/include/eigen3/unsupported/Eigen/src/NonLinearOptimization/r1mpyq.h \
- /usr/include/eigen3/unsupported/Eigen/src/NonLinearOptimization/rwupdt.h \
- /usr/include/eigen3/unsupported/Eigen/src/NonLinearOptimization/fdjac1.h \
- /usr/include/eigen3/unsupported/Eigen/src/NonLinearOptimization/lmpar.h \
- /usr/include/eigen3/unsupported/Eigen/src/NonLinearOptimization/dogleg.h \
- /usr/include/eigen3/unsupported/Eigen/src/NonLinearOptimization/covar.h \
- /usr/include/eigen3/unsupported/Eigen/src/NonLinearOptimization/chkder.h \
- /usr/include/eigen3/unsupported/Eigen/src/NonLinearOptimization/HybridNonLinearSolver.h \
- /usr/include/eigen3/unsupported/Eigen/src/NonLinearOptimization/LevenbergMarquardt.h \
- /usr/include/pcl-1.10/pcl/common/eigen.h \
- /usr/include/pcl-1.10/pcl/ModelCoefficients.h \
- /usr/include/eigen3/Eigen/Eigenvalues /usr/include/eigen3/Eigen/Geometry \
- /usr/include/eigen3/Eigen/src/Eigenvalues/Tridiagonalization.h \
- /usr/include/eigen3/Eigen/src/Eigenvalues/RealSchur.h \
- /usr/include/eigen3/Eigen/src/Eigenvalues/HessenbergDecomposition.h \
- /usr/include/eigen3/Eigen/src/Eigenvalues/EigenSolver.h \
- /usr/include/eigen3/Eigen/src/Eigenvalues/RealSchur.h \
- /usr/include/eigen3/Eigen/src/Eigenvalues/SelfAdjointEigenSolver.h \
- /usr/include/eigen3/Eigen/src/Eigenvalues/Tridiagonalization.h \
- /usr/include/eigen3/Eigen/src/Eigenvalues/GeneralizedSelfAdjointEigenSolver.h \
- /usr/include/eigen3/Eigen/src/Eigenvalues/HessenbergDecomposition.h \
- /usr/include/eigen3/Eigen/src/Eigenvalues/ComplexSchur.h \
- /usr/include/eigen3/Eigen/src/Eigenvalues/ComplexEigenSolver.h \
- /usr/include/eigen3/Eigen/src/Eigenvalues/ComplexSchur.h \
- /usr/include/eigen3/Eigen/src/Eigenvalues/RealQZ.h \
- /usr/include/eigen3/Eigen/src/Eigenvalues/GeneralizedEigenSolver.h \
- /usr/include/eigen3/Eigen/src/Eigenvalues/RealQZ.h \
- /usr/include/eigen3/Eigen/src/Eigenvalues/MatrixBaseEigenvalues.h \
- /usr/include/eigen3/Eigen/SVD /usr/include/eigen3/Eigen/LU \
- /usr/include/eigen3/Eigen/Dense /usr/include/eigen3/Eigen/Eigenvalues \
- /usr/include/pcl-1.10/pcl/common/impl/eigen.hpp \
+ /usr/include/pcl-1.10/pcl/point_types.h \
+ /usr/include/pcl-1.10/pcl/register_point_struct.h \
+ /usr/include/boost/preprocessor/seq/for_each.hpp \
+ /usr/include/boost/preprocessor/comparison.hpp \
+ /usr/include/boost/preprocessor/comparison/equal.hpp \
+ /usr/include/boost/preprocessor/comparison/not_equal.hpp \
+ /usr/include/boost/preprocessor/comparison/greater.hpp \
+ /usr/include/boost/preprocessor/comparison/less.hpp \
+ /usr/include/boost/preprocessor/comparison/greater_equal.hpp \
+ /usr/include/pcl-1.10/pcl/impl/point_types.hpp \
+ /usr/include/pcl-1.10/pcl/common/point_tests.h \
+ /usr/include/pcl-1.10/pcl/io/boost.h /usr/include/boost/filesystem.hpp \
+ /usr/include/boost/filesystem/config.hpp \
+ /usr/include/boost/filesystem/path.hpp \
+ /usr/include/boost/filesystem/path_traits.hpp \
+ /usr/include/boost/io/detail/quoted_manip.hpp \
+ /usr/include/boost/filesystem/operations.hpp \
+ /usr/include/boost/detail/bitmask.hpp \
+ /usr/include/boost/smart_ptr/intrusive_ptr.hpp \
+ /usr/include/boost/smart_ptr/intrusive_ref_counter.hpp \
+ /usr/include/boost/smart_ptr/detail/atomic_count.hpp \
+ /usr/include/boost/smart_ptr/detail/atomic_count_std_atomic.hpp \
+ /usr/include/c++/9/stack /usr/include/c++/9/bits/stl_stack.h \
+ /usr/include/boost/filesystem/convenience.hpp \
+ /usr/include/boost/filesystem/string_file.hpp \
+ /usr/include/boost/filesystem/fstream.hpp /usr/include/c++/9/fstream \
+ /usr/include/x86_64-linux-gnu/c++/9/bits/basic_file.h \
+ /usr/include/x86_64-linux-gnu/c++/9/bits/c++io.h \
+ /usr/include/c++/9/bits/fstream.tcc /usr/include/boost/mpl/inherit.hpp \
+ /usr/include/boost/mpl/empty_base.hpp \
+ /usr/include/boost/mpl/aux_/preprocessed/gcc/inherit.hpp \
+ /usr/include/boost/mpl/inherit_linearly.hpp \
+ /usr/include/boost/date_time/posix_time/posix_time.hpp \
+ /usr/include/boost/date_time/posix_time/time_formatters.hpp \
+ /usr/include/boost/date_time/gregorian/gregorian.hpp \
+ /usr/include/boost/date_time/gregorian/formatters.hpp \
+ /usr/include/boost/date_time/date_formatting.hpp \
+ /usr/include/boost/date_time/iso_format.hpp \
+ /usr/include/boost/date_time/parse_format_base.hpp \
+ /usr/include/boost/date_time/date_format_simple.hpp \
+ /usr/include/boost/date_time/gregorian/gregorian_io.hpp \
+ /usr/include/boost/date_time/date_facet.hpp \
+ /usr/include/boost/algorithm/string/replace.hpp \
+ /usr/include/boost/algorithm/string/config.hpp \
+ /usr/include/boost/algorithm/string/find_format.hpp \
+ /usr/include/boost/range/as_literal.hpp \
+ /usr/include/boost/range/iterator_range.hpp \
+ /usr/include/boost/range/iterator_range_io.hpp \
+ /usr/include/boost/range/detail/str_types.hpp \
+ /usr/include/boost/algorithm/string/concept.hpp \
+ /usr/include/boost/algorithm/string/detail/find_format.hpp \
+ /usr/include/boost/algorithm/string/detail/find_format_store.hpp \
+ /usr/include/boost/algorithm/string/detail/replace_storage.hpp \
+ /usr/include/boost/algorithm/string/sequence_traits.hpp \
+ /usr/include/boost/algorithm/string/yes_no_type.hpp \
+ /usr/include/boost/algorithm/string/detail/sequence.hpp \
+ /usr/include/boost/algorithm/string/detail/find_format_all.hpp \
+ /usr/include/boost/algorithm/string/finder.hpp \
+ /usr/include/boost/algorithm/string/constants.hpp \
+ /usr/include/boost/algorithm/string/detail/finder.hpp \
+ /usr/include/boost/algorithm/string/compare.hpp \
+ /usr/include/boost/algorithm/string/formatter.hpp \
+ /usr/include/boost/algorithm/string/detail/formatter.hpp \
+ /usr/include/boost/algorithm/string/detail/util.hpp \
+ /usr/include/boost/date_time/special_values_formatter.hpp \
+ /usr/include/boost/date_time/period_formatter.hpp \
+ /usr/include/boost/date_time/period_parser.hpp \
+ /usr/include/boost/date_time/string_parse_tree.hpp \
+ /usr/include/boost/algorithm/string/case_conv.hpp \
+ /usr/include/boost/iterator/transform_iterator.hpp \
+ /usr/include/boost/algorithm/string/detail/case_conv.hpp \
+ /usr/include/boost/date_time/string_convert.hpp \
+ /usr/include/boost/date_time/date_generator_formatter.hpp \
+ /usr/include/boost/date_time/date_generator_parser.hpp \
+ /usr/include/boost/date_time/format_date_parser.hpp \
+ /usr/include/boost/date_time/strings_from_facet.hpp \
+ /usr/include/boost/date_time/special_values_parser.hpp \
+ /usr/include/boost/date_time/gregorian/parsers.hpp \
+ /usr/include/boost/date_time/date_parsing.hpp \
+ /usr/include/boost/tokenizer.hpp /usr/include/boost/token_iterator.hpp \
+ /usr/include/boost/iterator/minimum_category.hpp \
+ /usr/include/boost/token_functions.hpp \
+ /usr/include/boost/date_time/time_formatting_streams.hpp \
+ /usr/include/boost/date_time/date_formatting_locales.hpp \
+ /usr/include/boost/date_time/date_names_put.hpp \
+ /usr/include/boost/date_time/time_parsing.hpp \
+ /usr/include/boost/date_time/posix_time/posix_time_io.hpp \
+ /usr/include/boost/date_time/time_facet.hpp \
+ /usr/include/boost/algorithm/string/erase.hpp \
+ /usr/include/boost/date_time/posix_time/time_parsers.hpp \
+ /usr/include/boost/interprocess/permissions.hpp \
+ /usr/include/boost/interprocess/detail/config_begin.hpp \
+ /usr/include/boost/interprocess/detail/workaround.hpp \
+ /usr/include/boost/interprocess/interprocess_fwd.hpp \
+ /usr/include/boost/interprocess/detail/std_fwd.hpp \
+ /usr/include/boost/interprocess/detail/config_end.hpp \
+ /usr/include/boost/iostreams/device/mapped_file.hpp \
+ /usr/include/boost/iostreams/close.hpp \
+ /usr/include/boost/iostreams/categories.hpp \
+ /usr/include/boost/iostreams/flush.hpp \
+ /usr/include/boost/iostreams/detail/dispatch.hpp \
+ /usr/include/boost/iostreams/detail/select.hpp \
+ /usr/include/boost/iostreams/traits.hpp \
+ /usr/include/boost/iostreams/detail/bool_trait_def.hpp \
+ /usr/include/boost/iostreams/detail/template_params.hpp \
+ /usr/include/boost/iostreams/detail/config/wide_streams.hpp \
+ /usr/include/boost/iostreams/detail/is_iterator_range.hpp \
+ /usr/include/boost/iostreams/detail/config/disable_warnings.hpp \
+ /usr/include/boost/iostreams/detail/config/enable_warnings.hpp \
+ /usr/include/boost/iostreams/detail/select_by_size.hpp \
+ /usr/include/boost/preprocessor/iteration/local.hpp \
+ /usr/include/boost/preprocessor/iteration/detail/local.hpp \
+ /usr/include/boost/iostreams/detail/wrap_unwrap.hpp \
+ /usr/include/boost/iostreams/detail/enable_if_stream.hpp \
+ /usr/include/boost/iostreams/traits_fwd.hpp \
+ /usr/include/boost/iostreams/detail/streambuf.hpp \
+ /usr/include/boost/iostreams/operations_fwd.hpp \
+ /usr/include/boost/iostreams/detail/adapter/non_blocking_adapter.hpp \
+ /usr/include/boost/iostreams/detail/ios.hpp \
+ /usr/include/boost/iostreams/read.hpp \
+ /usr/include/boost/iostreams/char_traits.hpp \
+ /usr/include/boost/iostreams/detail/char_traits.hpp \
+ /usr/include/boost/iostreams/seek.hpp \
+ /usr/include/boost/iostreams/positioning.hpp \
+ /usr/include/boost/iostreams/detail/config/codecvt.hpp \
+ /usr/include/boost/iostreams/detail/config/fpos.hpp \
+ /usr/include/boost/iostreams/write.hpp \
+ /usr/include/boost/iostreams/concepts.hpp \
+ /usr/include/boost/iostreams/detail/default_arg.hpp \
+ /usr/include/boost/iostreams/detail/config/auto_link.hpp \
+ /usr/include/boost/iostreams/detail/config/dyn_link.hpp \
+ /usr/include/boost/iostreams/detail/path.hpp \
+ /usr/include/boost/algorithm/string.hpp \
+ /usr/include/boost/algorithm/string/std_containers_traits.hpp \
+ /usr/include/boost/algorithm/string/std/string_traits.hpp \
+ /usr/include/boost/algorithm/string/std/list_traits.hpp \
+ /usr/include/boost/algorithm/string/std/slist_traits.hpp \
+ /usr/include/c++/9/ext/slist \
+ /usr/include/boost/algorithm/string/trim.hpp \
+ /usr/include/boost/algorithm/string/detail/trim.hpp \
+ /usr/include/boost/algorithm/string/classification.hpp \
+ /usr/include/boost/algorithm/string/detail/classification.hpp \
+ /usr/include/boost/algorithm/string/predicate_facade.hpp \
+ /usr/include/boost/algorithm/string/predicate.hpp \
+ /usr/include/boost/algorithm/string/find.hpp \
+ /usr/include/boost/algorithm/string/detail/predicate.hpp \
+ /usr/include/boost/algorithm/string/split.hpp \
+ /usr/include/boost/algorithm/string/iter_find.hpp \
+ /usr/include/boost/algorithm/string/find_iterator.hpp \
+ /usr/include/boost/algorithm/string/detail/find_iterator.hpp \
+ /usr/include/boost/algorithm/string/join.hpp \
+ /usr/include/boost/interprocess/sync/file_lock.hpp \
+ /usr/include/boost/interprocess/exceptions.hpp \
+ /usr/include/boost/interprocess/errors.hpp \
+ /usr/include/boost/interprocess/detail/os_file_functions.hpp \
+ /usr/include/fcntl.h /usr/include/x86_64-linux-gnu/bits/fcntl.h \
+ /usr/include/x86_64-linux-gnu/bits/fcntl-linux.h \
+ /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
+ /usr/include/linux/falloc.h /usr/include/x86_64-linux-gnu/bits/stat.h \
+ /usr/include/x86_64-linux-gnu/sys/stat.h \
+ /usr/include/x86_64-linux-gnu/bits/statx.h /usr/include/linux/stat.h \
+ /usr/include/linux/types.h /usr/include/x86_64-linux-gnu/asm/types.h \
+ /usr/include/asm-generic/types.h /usr/include/asm-generic/int-ll64.h \
+ /usr/include/x86_64-linux-gnu/asm/bitsperlong.h \
+ /usr/include/asm-generic/bitsperlong.h /usr/include/linux/posix_types.h \
+ /usr/include/linux/stddef.h \
+ /usr/include/x86_64-linux-gnu/asm/posix_types.h \
+ /usr/include/x86_64-linux-gnu/asm/posix_types_64.h \
+ /usr/include/asm-generic/posix_types.h \
+ /usr/include/x86_64-linux-gnu/bits/statx-generic.h \
+ /usr/include/x86_64-linux-gnu/bits/types/struct_statx_timestamp.h \
+ /usr/include/x86_64-linux-gnu/bits/types/struct_statx.h \
+ /usr/include/dirent.h /usr/include/x86_64-linux-gnu/bits/dirent.h \
+ /usr/include/x86_64-linux-gnu/bits/dirent_ext.h \
+ /usr/include/boost/interprocess/detail/os_thread_functions.hpp \
+ /usr/include/boost/interprocess/streams/bufferstream.hpp \
+ /usr/include/boost/interprocess/detail/posix_time_types_wrk.hpp \
+ /usr/include/boost/interprocess/sync/detail/common_algorithms.hpp \
+ /usr/include/boost/interprocess/sync/spin/wait.hpp \
+ /usr/include/boost/interprocess/sync/detail/locks.hpp \
+ /usr/include/pcl-1.10/pcl/TextureMesh.h \
+ /usr/include/pcl-1.10/pcl/io/impl/pcd_io.hpp \
+ /usr/include/pcl-1.10/pcl/io/low_level_io.h \
+ /usr/include/x86_64-linux-gnu/sys/mman.h \
+ /usr/include/x86_64-linux-gnu/bits/mman.h \
+ /usr/include/x86_64-linux-gnu/bits/mman-map-flags-generic.h \
+ /usr/include/x86_64-linux-gnu/bits/mman-linux.h \
+ /usr/include/x86_64-linux-gnu/bits/mman-shared.h \
+ /usr/include/x86_64-linux-gnu/sys/fcntl.h \
+ /usr/include/pcl-1.10/pcl/io/lzf.h \
+ /usr/include/pcl-1.10/pcl/common/common.h \
+ /usr/include/pcl-1.10/pcl/common/impl/common.hpp \
+ /usr/include/pcl-1.10/pcl/common/transforms.h \
  /usr/include/pcl-1.10/pcl/common/centroid.h \
  /usr/include/pcl-1.10/pcl/cloud_iterator.h \
  /usr/include/pcl-1.10/pcl/correspondence.h \
@@ -1942,7 +2032,6 @@ fast_mapping_slam/CMakeFiles/fm_slam_node.dir/src/plicp_map.cc.o: \
  /usr/include/boost/fusion/iterator/distance.hpp \
  /usr/include/boost/fusion/mpl/at.hpp \
  /usr/include/boost/fusion/sequence/intrinsic/value_at.hpp \
- /usr/include/boost/mpl/empty_base.hpp \
  /usr/include/boost/fusion/sequence/intrinsic_fwd.hpp \
  /usr/include/boost/fusion/support/is_sequence.hpp \
  /usr/include/boost/fusion/mpl/back.hpp /usr/include/boost/mpl/back.hpp \
@@ -1997,8 +2086,6 @@ fast_mapping_slam/CMakeFiles/fm_slam_node.dir/src/plicp_map.cc.o: \
  /usr/include/boost/fusion/view/joint_view/detail/key_of_impl.hpp \
  /usr/include/boost/fusion/view/joint_view/detail/begin_impl.hpp \
  /usr/include/boost/fusion/view/joint_view/detail/end_impl.hpp \
- /usr/include/boost/mpl/inherit.hpp \
- /usr/include/boost/mpl/aux_/preprocessed/gcc/inherit.hpp \
  /usr/include/boost/fusion/view/single_view/single_view.hpp \
  /usr/include/boost/fusion/view/single_view/single_view_iterator.hpp \
  /usr/include/boost/fusion/view/single_view/detail/deref_impl.hpp \
@@ -2113,19 +2200,131 @@ fast_mapping_slam/CMakeFiles/fm_slam_node.dir/src/plicp_map.cc.o: \
  /usr/include/boost/fusion/view/filter_view/detail/end_impl.hpp \
  /usr/include/boost/fusion/view/filter_view/detail/size_impl.hpp \
  /usr/include/pcl-1.10/pcl/common/impl/centroid.hpp \
+ /usr/include/pcl-1.10/pcl/common/eigen.h \
+ /usr/include/eigen3/Eigen/Eigenvalues /usr/include/eigen3/Eigen/Geometry \
+ /usr/include/eigen3/Eigen/src/Eigenvalues/Tridiagonalization.h \
+ /usr/include/eigen3/Eigen/src/Eigenvalues/RealSchur.h \
+ /usr/include/eigen3/Eigen/src/Eigenvalues/HessenbergDecomposition.h \
+ /usr/include/eigen3/Eigen/src/Eigenvalues/EigenSolver.h \
+ /usr/include/eigen3/Eigen/src/Eigenvalues/RealSchur.h \
+ /usr/include/eigen3/Eigen/src/Eigenvalues/SelfAdjointEigenSolver.h \
+ /usr/include/eigen3/Eigen/src/Eigenvalues/Tridiagonalization.h \
+ /usr/include/eigen3/Eigen/src/Eigenvalues/GeneralizedSelfAdjointEigenSolver.h \
+ /usr/include/eigen3/Eigen/src/Eigenvalues/HessenbergDecomposition.h \
+ /usr/include/eigen3/Eigen/src/Eigenvalues/ComplexSchur.h \
+ /usr/include/eigen3/Eigen/src/Eigenvalues/ComplexEigenSolver.h \
+ /usr/include/eigen3/Eigen/src/Eigenvalues/ComplexSchur.h \
+ /usr/include/eigen3/Eigen/src/Eigenvalues/RealQZ.h \
+ /usr/include/eigen3/Eigen/src/Eigenvalues/GeneralizedEigenSolver.h \
+ /usr/include/eigen3/Eigen/src/Eigenvalues/RealQZ.h \
+ /usr/include/eigen3/Eigen/src/Eigenvalues/MatrixBaseEigenvalues.h \
+ /usr/include/eigen3/Eigen/SVD /usr/include/eigen3/Eigen/LU \
+ /usr/include/eigen3/Eigen/Dense /usr/include/eigen3/Eigen/Eigenvalues \
+ /usr/include/pcl-1.10/pcl/common/impl/eigen.hpp \
+ /usr/include/pcl-1.10/pcl/common/impl/transforms.hpp \
+ /home/autel/fast_mapping_slam_with_backend/src/fast_mapping_slam/src/../include/backend.h \
+ /usr/include/pcl-1.10/pcl/registration/icp.h \
+ /usr/include/pcl-1.10/pcl/sample_consensus/ransac.h \
+ /usr/include/pcl-1.10/pcl/sample_consensus/sac.h \
+ /usr/include/pcl-1.10/pcl/sample_consensus/boost.h \
+ /usr/include/boost/random.hpp \
+ /usr/include/boost/random/additive_combine.hpp \
+ /usr/include/boost/random/detail/config.hpp \
+ /usr/include/boost/random/detail/operators.hpp \
+ /usr/include/boost/random/detail/seed.hpp \
+ /usr/include/boost/random/linear_congruential.hpp \
+ /usr/include/boost/random/detail/const_mod.hpp \
+ /usr/include/boost/random/detail/large_arithmetic.hpp \
+ /usr/include/boost/random/detail/integer_log2.hpp \
+ /usr/include/boost/integer/integer_log2.hpp \
+ /usr/include/boost/random/detail/disable_warnings.hpp \
+ /usr/include/boost/random/detail/enable_warnings.hpp \
+ /usr/include/boost/random/detail/seed_impl.hpp \
+ /usr/include/boost/integer/integer_mask.hpp \
+ /usr/include/boost/random/traits.hpp \
+ /usr/include/boost/random/detail/signed_unsigned_tools.hpp \
+ /usr/include/boost/random/detail/generator_bits.hpp \
+ /usr/include/boost/random/discard_block.hpp \
+ /usr/include/boost/random/independent_bits.hpp \
+ /usr/include/boost/random/inversive_congruential.hpp \
+ /usr/include/boost/random/lagged_fibonacci.hpp \
+ /usr/include/boost/random/uniform_01.hpp \
+ /usr/include/boost/random/detail/ptr_helper.hpp \
+ /usr/include/boost/random/detail/generator_seed_seq.hpp \
+ /usr/include/boost/random/linear_feedback_shift.hpp \
+ /usr/include/boost/random/mersenne_twister.hpp \
+ /usr/include/boost/random/detail/polynomial.hpp \
+ /usr/include/boost/random/ranlux.hpp \
+ /usr/include/boost/random/subtract_with_carry.hpp \
+ /usr/include/boost/random/shuffle_order.hpp \
+ /usr/include/boost/random/shuffle_output.hpp \
+ /usr/include/boost/random/taus88.hpp \
+ /usr/include/boost/random/xor_combine.hpp \
+ /usr/include/boost/random/generate_canonical.hpp \
+ /usr/include/boost/random/seed_seq.hpp \
+ /usr/include/boost/random/random_number_generator.hpp \
+ /usr/include/boost/random/uniform_int_distribution.hpp \
+ /usr/include/boost/random/detail/uniform_int_float.hpp \
+ /usr/include/boost/random/variate_generator.hpp \
+ /usr/include/boost/random/bernoulli_distribution.hpp \
+ /usr/include/boost/random/beta_distribution.hpp \
+ /usr/include/boost/random/gamma_distribution.hpp \
+ /usr/include/boost/random/exponential_distribution.hpp \
+ /usr/include/boost/random/detail/int_float_pair.hpp \
+ /usr/include/boost/random/binomial_distribution.hpp \
+ /usr/include/boost/random/cauchy_distribution.hpp \
+ /usr/include/boost/random/chi_squared_distribution.hpp \
+ /usr/include/boost/random/discrete_distribution.hpp \
+ /usr/include/boost/random/detail/vector_io.hpp \
+ /usr/include/boost/random/extreme_value_distribution.hpp \
+ /usr/include/boost/random/fisher_f_distribution.hpp \
+ /usr/include/boost/random/geometric_distribution.hpp \
+ /usr/include/boost/random/hyperexponential_distribution.hpp \
+ /usr/include/boost/type_traits/has_pre_increment.hpp \
+ /usr/include/boost/type_traits/detail/has_prefix_operator.hpp \
+ /usr/include/boost/random/laplace_distribution.hpp \
+ /usr/include/boost/random/lognormal_distribution.hpp \
+ /usr/include/boost/random/normal_distribution.hpp \
+ /usr/include/boost/random/negative_binomial_distribution.hpp \
+ /usr/include/boost/random/poisson_distribution.hpp \
+ /usr/include/boost/random/non_central_chi_squared_distribution.hpp \
+ /usr/include/boost/random/uniform_real_distribution.hpp \
+ /usr/include/boost/random/piecewise_constant_distribution.hpp \
+ /usr/include/boost/random/uniform_real.hpp \
+ /usr/include/boost/random/piecewise_linear_distribution.hpp \
+ /usr/include/boost/random/student_t_distribution.hpp \
+ /usr/include/boost/random/triangle_distribution.hpp \
+ /usr/include/boost/random/uniform_int.hpp \
+ /usr/include/boost/random/uniform_on_sphere.hpp \
+ /usr/include/boost/random/uniform_smallint.hpp \
+ /usr/include/boost/random/weibull_distribution.hpp \
+ /usr/include/pcl-1.10/pcl/sample_consensus/sac_model.h \
+ /usr/include/pcl-1.10/pcl/sample_consensus/model_types.h \
+ /usr/include/pcl-1.10/pcl/search/search.h \
+ /usr/include/pcl-1.10/pcl/sample_consensus/sac_model_registration.h \
+ /usr/include/pcl-1.10/pcl/sample_consensus/eigen.h \
+ /usr/include/eigen3/unsupported/Eigen/NonLinearOptimization \
+ /usr/include/eigen3/Eigen/Jacobi /usr/include/eigen3/Eigen/QR \
+ /usr/include/eigen3/unsupported/Eigen/NumericalDiff \
+ /usr/include/eigen3/unsupported/Eigen/src/NumericalDiff/NumericalDiff.h \
+ /usr/include/eigen3/unsupported/Eigen/src/NonLinearOptimization/qrsolv.h \
+ /usr/include/eigen3/unsupported/Eigen/src/NonLinearOptimization/r1updt.h \
+ /usr/include/eigen3/unsupported/Eigen/src/NonLinearOptimization/r1mpyq.h \
+ /usr/include/eigen3/unsupported/Eigen/src/NonLinearOptimization/rwupdt.h \
+ /usr/include/eigen3/unsupported/Eigen/src/NonLinearOptimization/fdjac1.h \
+ /usr/include/eigen3/unsupported/Eigen/src/NonLinearOptimization/lmpar.h \
+ /usr/include/eigen3/unsupported/Eigen/src/NonLinearOptimization/dogleg.h \
+ /usr/include/eigen3/unsupported/Eigen/src/NonLinearOptimization/covar.h \
+ /usr/include/eigen3/unsupported/Eigen/src/NonLinearOptimization/chkder.h \
+ /usr/include/eigen3/unsupported/Eigen/src/NonLinearOptimization/HybridNonLinearSolver.h \
+ /usr/include/eigen3/unsupported/Eigen/src/NonLinearOptimization/LevenbergMarquardt.h \
  /usr/include/pcl-1.10/pcl/sample_consensus/impl/sac_model_registration.hpp \
  /usr/include/pcl-1.10/pcl/common/point_operators.h \
  /usr/include/pcl-1.10/pcl/registration/registration.h \
- /usr/include/pcl-1.10/pcl/common/transforms.h \
- /usr/include/pcl-1.10/pcl/common/impl/transforms.hpp \
  /usr/include/pcl-1.10/pcl/search/kdtree.h \
  /usr/include/pcl-1.10/pcl/kdtree/kdtree_flann.h \
  /usr/include/pcl-1.10/pcl/kdtree/kdtree.h \
  /usr/include/pcl-1.10/pcl/point_representation.h \
- /usr/include/pcl-1.10/pcl/common/io.h \
- /usr/include/pcl-1.10/pcl/PolygonMesh.h \
- /usr/include/pcl-1.10/pcl/Vertices.h \
- /usr/include/pcl-1.10/pcl/common/impl/io.hpp \
  /usr/include/flann/util/params.h /usr/include/flann/util/any.h \
  /usr/include/flann/general.h /usr/include/flann/defines.h \
  /usr/include/flann/config.h \
@@ -2227,7 +2426,6 @@ fast_mapping_slam/CMakeFiles/fm_slam_node.dir/src/plicp_map.cc.o: \
  /usr/include/boost/preprocessor/facilities/apply.hpp \
  /usr/include/boost/preprocessor/detail/is_unary.hpp \
  /usr/include/boost/preprocessor/iteration.hpp \
- /usr/include/boost/preprocessor/iteration/local.hpp \
  /usr/include/boost/preprocessor/iteration/self.hpp \
  /usr/include/boost/preprocessor/list.hpp \
  /usr/include/boost/preprocessor/list/append.hpp \
@@ -2338,7 +2536,6 @@ fast_mapping_slam/CMakeFiles/fm_slam_node.dir/src/plicp_map.cc.o: \
  /usr/include/boost/pending/indirect_cmp.hpp \
  /usr/include/boost/graph/exception.hpp /usr/include/boost/smart_ptr.hpp \
  /usr/include/boost/intrusive_ptr.hpp \
- /usr/include/boost/smart_ptr/intrusive_ptr.hpp \
  /usr/include/pcl-1.10/pcl/registration/transformation_estimation.h \
  /usr/include/pcl-1.10/pcl/registration/correspondence_types.h \
  /usr/include/pcl-1.10/pcl/registration/impl/correspondence_types.hpp \

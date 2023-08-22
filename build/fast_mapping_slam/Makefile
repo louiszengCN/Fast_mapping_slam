@@ -995,6 +995,30 @@ src/sub_map.cc.s:
 	cd /home/autel/fast_mapping_slam_with_backend/build && $(MAKE) $(MAKESILENT) -f fast_mapping_slam/CMakeFiles/fm_slam_node.dir/build.make fast_mapping_slam/CMakeFiles/fm_slam_node.dir/src/sub_map.cc.s
 .PHONY : src/sub_map.cc.s
 
+src/undistoration.o: src/undistoration.cc.o
+.PHONY : src/undistoration.o
+
+# target to build an object file
+src/undistoration.cc.o:
+	cd /home/autel/fast_mapping_slam_with_backend/build && $(MAKE) $(MAKESILENT) -f fast_mapping_slam/CMakeFiles/fm_slam_node.dir/build.make fast_mapping_slam/CMakeFiles/fm_slam_node.dir/src/undistoration.cc.o
+.PHONY : src/undistoration.cc.o
+
+src/undistoration.i: src/undistoration.cc.i
+.PHONY : src/undistoration.i
+
+# target to preprocess a source file
+src/undistoration.cc.i:
+	cd /home/autel/fast_mapping_slam_with_backend/build && $(MAKE) $(MAKESILENT) -f fast_mapping_slam/CMakeFiles/fm_slam_node.dir/build.make fast_mapping_slam/CMakeFiles/fm_slam_node.dir/src/undistoration.cc.i
+.PHONY : src/undistoration.cc.i
+
+src/undistoration.s: src/undistoration.cc.s
+.PHONY : src/undistoration.s
+
+# target to generate assembly for a file
+src/undistoration.cc.s:
+	cd /home/autel/fast_mapping_slam_with_backend/build && $(MAKE) $(MAKESILENT) -f fast_mapping_slam/CMakeFiles/fm_slam_node.dir/build.make fast_mapping_slam/CMakeFiles/fm_slam_node.dir/src/undistoration.cc.s
+.PHONY : src/undistoration.cc.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -1072,6 +1096,9 @@ help:
 	@echo "... src/sub_map.o"
 	@echo "... src/sub_map.i"
 	@echo "... src/sub_map.s"
+	@echo "... src/undistoration.o"
+	@echo "... src/undistoration.i"
+	@echo "... src/undistoration.s"
 .PHONY : help
 
 

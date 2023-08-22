@@ -153,6 +153,7 @@ add_executable(fm_slam_node
   src/sub_map.cc
   src/backend.cc
   src/pose_integrater.cc
+  src/undistoration.cc
 
 )
 

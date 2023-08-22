@@ -16,7 +16,7 @@
 
 #ifndef LESSON2_SCAN_MATCH_PLICP
 #define LESSON2_SCAN_MATCH_PLICP
-
+#include <sensor_msgs/Imu.h>
 #include <cmath>
 #include <vector>
 #include <chrono>
@@ -30,7 +30,7 @@
 #include <nav_msgs/Path.h>
 #include <geometry_msgs/PoseStamped.h>
 #include <nav_msgs/OccupancyGrid.h>
-#include <cmath>
+
 // tf2
 #include <tf2/utils.h>
 #include <tf2/LinearMath/Transform.h>
@@ -41,7 +41,26 @@
 #include <csm/csm_all.h>
 #undef min
 #undef max
+#include <iostream>
+#include <deque>
+#include <mutex>
+// ros
 
+
+#include <sensor_msgs/PointCloud2.h>
+#include <sensor_msgs/Imu.h>
+// tf
+#include <tf/LinearMath/Quaternion.h>
+#include <tf/transform_datatypes.h>
+
+// pcl_ros
+#include <pcl_ros/point_cloud.h>
+
+// pcl
+#include <pcl/point_cloud.h>
+#include <pcl/point_types.h>
+#include <pcl/common/common.h>
+#include <pcl/common/transforms.h>
 struct Point {
     int x;
     int y;
@@ -57,6 +76,7 @@ private:
     ros::Publisher path_publisher_;
     ros::Publisher map_publihser_;
     ros::Publisher map_publihser_b;
+    ros::Subscriber imu_sub;
 
 
     ros::Time last_icp_time_;
@@ -100,9 +120,7 @@ private:
     std::vector<double> a_cos_;
     std::vector<double> a_sin_;
 
-    std::chrono::steady_clock::time_point start_time_;
-    std::chrono::steady_clock::time_point end_time_;
-    std::chrono::duration<double> time_used_;
+
 
     //map param
     double resolution;
@@ -124,12 +142,13 @@ private:
     std::vector<std::vector<int>> grid_map;
 
     bool isfirstscan = true;
+    std::deque<sensor_msgs::Imu> plicp_imu_queue;
 
     // csm
     sm_params input_;
     sm_result output_;
     LDP prev_ldp_scan_;
-
+    void Imucallback(const sensor_msgs::Imu::ConstPtr &imuMsg);
     void InitParams();
     void CreateCache(const sensor_msgs::LaserScan::ConstPtr &scan_msg);
     std::vector<double> laser2odom(double x, double y, double z);
@@ -143,8 +162,86 @@ private:
     void publish_path(const tf2::Transform &corr_ch);
     std::vector<Point> Bresenham(int x0, int y0, int x1, int y1);
    //void updateMap(const sensor_msgs::LaserScan::ConstPtr& scan_msg, double robot_x, double robot_y, double robot_theta);
-    void publishMap(const sensor_msgs::LaserScan::ConstPtr &scan_msg, double r_p_x, double r_p_y, double r_p_theta);
-    void publishMap_back(const sensor_msgs::LaserScan::ConstPtr &scan_msg, double r_p_x, double r_p_y, double r_p_theta);
+    void publishMap(const sensor_msgs::LaserScan::ConstPtr &scan_msg, double r_p_x, double r_p_y, double r_p_theta, double word_x, double word_y);
+    void publishMap_back(const sensor_msgs::LaserScan::ConstPtr &scan_msg, double r_p_x, double r_p_y, double r_p_theta, double word_x, double word_y);
+
+    /////////////////////////////////////////////////////////undistoration////////////////////////////////////////////////////////////
+    // laser数据
+    // 使用PCL中点的数据结构 pcl::PointXYZ
+    typedef pcl::PointXYZ PointT;
+    // 使用PCL中点云的数据结构 pcl::PointCloud<pcl::PointXYZ>
+    typedef pcl::PointCloud<PointT> PointCloudT;
+    sensor_msgs::LaserScan::ConstPtr CorrectLaserScan(const sensor_msgs::LaserScan::ConstPtr &scan_msg);
+    bool CacheLaserScan(const sensor_msgs::LaserScan::ConstPtr &laserScanMsg);
+    bool PruneImuDeque();
+    void CreateAngleCache(const sensor_msgs::LaserScan::ConstPtr &scan_msg);
+    sensor_msgs::LaserScan::ConstPtr computedistoration();
+    void ComputeRotation(double pointTime, float *rotXCur, float *rotYCur, float *rotZCur);
+    void ResetParameters();
+    // void undistoration::ImuCallback(const sensor_msgs::Imu::ConstPtr &imuMsg);
+    // ros::NodeHandle nh_;
+    // ros::Subscriber sub_;
+    std::deque<sensor_msgs::LaserScan> laser_queue_; // 保存雷达数据
+    std::deque<sensor_msgs::Imu> imu_queue_;
+    std::deque<nav_msgs::Odometry> odom_queue_;
+
+    bool first_scan_;
+    bool use_imu_ = true;
+
+
+    sensor_msgs::LaserScan::ConstPtr current_laserscan_;
+    PointCloudT::Ptr corrected_pointcloud_;
+
+    std_msgs::Header current_laserscan_header_;
+    double current_scan_time_increment_;
+    double current_scan_time_start_;
+    double current_scan_time_end_;
+    double scan_count_undis;
+
+    std::mutex imu_lock_;
+    std::mutex odom_lock_;
+
+    int current_imu_index_;
+    std::vector<double> imu_time_;
+    std::vector<double> imu_rot_x_;
+    std::vector<double> imu_rot_y_;
+    std::vector<double> imu_rot_z_;
+
+    nav_msgs::Odometry start_odom_msg_, end_odom_msg_;
+    double start_odom_time_, end_odom_time_;
+    float odom_incre_x_, odom_incre_y_, odom_incre_z_;
+
+    std::chrono::steady_clock::time_point start_time_;
+    std::chrono::steady_clock::time_point end_time_;
+    std::chrono::duration<double> time_used_;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 public:
     ScanMatchPLICP();
     ~ScanMatchPLICP();

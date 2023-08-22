@@ -9,6 +9,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/fm_slam_node.dir/src/pose_integrater.cc.o.d"
   "CMakeFiles/fm_slam_node.dir/src/sub_map.cc.o"
   "CMakeFiles/fm_slam_node.dir/src/sub_map.cc.o.d"
+  "CMakeFiles/fm_slam_node.dir/src/undistoration.cc.o"
+  "CMakeFiles/fm_slam_node.dir/src/undistoration.cc.o.d"
 )
 
 # Per-language clean rules from dependency scanning.
