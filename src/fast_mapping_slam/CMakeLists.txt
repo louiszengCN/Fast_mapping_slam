@@ -168,6 +168,14 @@ target_link_libraries(fm_slam_node
   ${PCL_LIBRARIES}
 )
 
+add_executable(feature_extract_node src/feature_extract.cc)
+add_dependencies(feature_extract_node ${catkin_EXPORTED_TARGETS})
+target_link_libraries(feature_extract_node
+  ${catkin_LIBRARIES}
+  ${Boost_LIBRARIES}
+  ${csm_LIBRARIES}
+  ${PCL_LIBRARIES}
+)
 
 #############
 ## Install ##

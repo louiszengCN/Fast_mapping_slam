@@ -899,6 +899,20 @@ fm_slam_node/fast:
 	cd /home/autel/fast_mapping_slam_with_backend/build && $(MAKE) $(MAKESILENT) -f fast_mapping_slam/CMakeFiles/fm_slam_node.dir/build.make fast_mapping_slam/CMakeFiles/fm_slam_node.dir/build
 .PHONY : fm_slam_node/fast
 
+# Convenience name for target.
+fast_mapping_slam/CMakeFiles/feature_extract_node.dir/rule:
+	cd /home/autel/fast_mapping_slam_with_backend/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 fast_mapping_slam/CMakeFiles/feature_extract_node.dir/rule
+.PHONY : fast_mapping_slam/CMakeFiles/feature_extract_node.dir/rule
+
+# Convenience name for target.
+feature_extract_node: fast_mapping_slam/CMakeFiles/feature_extract_node.dir/rule
+.PHONY : feature_extract_node
+
+# fast build rule for target.
+feature_extract_node/fast:
+	cd /home/autel/fast_mapping_slam_with_backend/build && $(MAKE) $(MAKESILENT) -f fast_mapping_slam/CMakeFiles/feature_extract_node.dir/build.make fast_mapping_slam/CMakeFiles/feature_extract_node.dir/build
+.PHONY : feature_extract_node/fast
+
 src/backend.o: src/backend.cc.o
 .PHONY : src/backend.o
 
@@ -922,6 +936,30 @@ src/backend.s: src/backend.cc.s
 src/backend.cc.s:
 	cd /home/autel/fast_mapping_slam_with_backend/build && $(MAKE) $(MAKESILENT) -f fast_mapping_slam/CMakeFiles/fm_slam_node.dir/build.make fast_mapping_slam/CMakeFiles/fm_slam_node.dir/src/backend.cc.s
 .PHONY : src/backend.cc.s
+
+src/feature_extract.o: src/feature_extract.cc.o
+.PHONY : src/feature_extract.o
+
+# target to build an object file
+src/feature_extract.cc.o:
+	cd /home/autel/fast_mapping_slam_with_backend/build && $(MAKE) $(MAKESILENT) -f fast_mapping_slam/CMakeFiles/feature_extract_node.dir/build.make fast_mapping_slam/CMakeFiles/feature_extract_node.dir/src/feature_extract.cc.o
+.PHONY : src/feature_extract.cc.o
+
+src/feature_extract.i: src/feature_extract.cc.i
+.PHONY : src/feature_extract.i
+
+# target to preprocess a source file
+src/feature_extract.cc.i:
+	cd /home/autel/fast_mapping_slam_with_backend/build && $(MAKE) $(MAKESILENT) -f fast_mapping_slam/CMakeFiles/feature_extract_node.dir/build.make fast_mapping_slam/CMakeFiles/feature_extract_node.dir/src/feature_extract.cc.i
+.PHONY : src/feature_extract.cc.i
+
+src/feature_extract.s: src/feature_extract.cc.s
+.PHONY : src/feature_extract.s
+
+# target to generate assembly for a file
+src/feature_extract.cc.s:
+	cd /home/autel/fast_mapping_slam_with_backend/build && $(MAKE) $(MAKESILENT) -f fast_mapping_slam/CMakeFiles/feature_extract_node.dir/build.make fast_mapping_slam/CMakeFiles/feature_extract_node.dir/src/feature_extract.cc.s
+.PHONY : src/feature_extract.cc.s
 
 src/plicp_map.o: src/plicp_map.cc.o
 .PHONY : src/plicp_map.o
@@ -1083,10 +1121,14 @@ help:
 	@echo "... tf_generate_messages_lisp"
 	@echo "... tf_generate_messages_nodejs"
 	@echo "... tf_generate_messages_py"
+	@echo "... feature_extract_node"
 	@echo "... fm_slam_node"
 	@echo "... src/backend.o"
 	@echo "... src/backend.i"
 	@echo "... src/backend.s"
+	@echo "... src/feature_extract.o"
+	@echo "... src/feature_extract.i"
+	@echo "... src/feature_extract.s"
 	@echo "... src/plicp_map.o"
 	@echo "... src/plicp_map.i"
 	@echo "... src/plicp_map.s"

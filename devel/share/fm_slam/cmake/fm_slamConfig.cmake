@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/autel/fast_mapping_slam_with_backend/devel/lib;/home/autel/fast_mapping_slam_with_backend/devel/lib;/home/autel/my_ws/devel/lib;/opt/ros/noetic/lib)
+    foreach(path /home/autel/fast_mapping_slam_with_backend/devel/lib;/home/autel/lidar_imu_calib/devel/lib;/home/autel/lio_sam/devel/lib;/home/autel/autel_floam/devel/lib;/home/autel/fast_mapping_slam_with_backend/devel/lib;/home/autel/my_ws/devel/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

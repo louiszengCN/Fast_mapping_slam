@@ -87,6 +87,7 @@
 /home/autel/fast_mapping_slam_with_backend/build/fast_mapping_slam/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir
 /home/autel/fast_mapping_slam_with_backend/build/fast_mapping_slam/CMakeFiles/tf2_msgs_generate_messages_py.dir
 /home/autel/fast_mapping_slam_with_backend/build/fast_mapping_slam/CMakeFiles/fm_slam_node.dir
+/home/autel/fast_mapping_slam_with_backend/build/fast_mapping_slam/CMakeFiles/feature_extract_node.dir
 /home/autel/fast_mapping_slam_with_backend/build/fast_mapping_slam/CMakeFiles/test.dir
 /home/autel/fast_mapping_slam_with_backend/build/fast_mapping_slam/CMakeFiles/edit_cache.dir
 /home/autel/fast_mapping_slam_with_backend/build/fast_mapping_slam/CMakeFiles/rebuild_cache.dir

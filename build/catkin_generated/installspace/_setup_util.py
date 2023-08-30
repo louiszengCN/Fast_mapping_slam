@@ -268,7 +268,7 @@ if __name__ == '__main__':
 
         if not args.local:
             # environment at generation time
-            CMAKE_PREFIX_PATH = r'/home/autel/fast_mapping_slam_with_backend/devel;/home/autel/my_ws/devel;/opt/ros/noetic'.split(';')
+            CMAKE_PREFIX_PATH = r'/home/autel/lidar_imu_calib/devel;/home/autel/lio_sam/devel;/home/autel/autel_floam/devel;/home/autel/fast_mapping_slam_with_backend/devel;/home/autel/my_ws/devel;/opt/ros/noetic'.split(';')
         else:
             # don't consider any other prefix path than this one
             CMAKE_PREFIX_PATH = []

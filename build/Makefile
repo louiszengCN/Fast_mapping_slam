@@ -964,6 +964,19 @@ fm_slam_node/fast:
 	$(MAKE) $(MAKESILENT) -f fast_mapping_slam/CMakeFiles/fm_slam_node.dir/build.make fast_mapping_slam/CMakeFiles/fm_slam_node.dir/build
 .PHONY : fm_slam_node/fast
 
+#=============================================================================
+# Target rules for targets named feature_extract_node
+
+# Build rule for target.
+feature_extract_node: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 feature_extract_node
+.PHONY : feature_extract_node
+
+# fast build rule for target.
+feature_extract_node/fast:
+	$(MAKE) $(MAKESILENT) -f fast_mapping_slam/CMakeFiles/feature_extract_node.dir/build.make fast_mapping_slam/CMakeFiles/feature_extract_node.dir/build
+.PHONY : feature_extract_node/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -1033,6 +1046,7 @@ help:
 	@echo "... tf_generate_messages_lisp"
 	@echo "... tf_generate_messages_nodejs"
 	@echo "... tf_generate_messages_py"
+	@echo "... feature_extract_node"
 	@echo "... fm_slam_node"
 	@echo "... gmock"
 	@echo "... gmock_main"
